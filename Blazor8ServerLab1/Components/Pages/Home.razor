@@ -1,7 +1,23 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<AuthorizeView>
 
-<h1>Hello, world!</h1>
+    <Authorizing>
+        <p>正在驗證您的身份...</p>
+    </Authorizing>
 
-Welcome to your new app.
+    <Authorized>
+        <PageTitle>Home</PageTitle>
+
+        <h1>Hello, world!</h1>
+
+        Welcome to your new app.
+    </Authorized>
+
+    <NotAuthorized>
+        <h2>
+            您沒有檢視這個畫面的權限，請先登入後再繼續。
+        </h2>
+    </NotAuthorized>
+
+</AuthorizeView>
